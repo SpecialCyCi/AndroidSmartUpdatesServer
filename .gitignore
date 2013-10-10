@@ -77,3 +77,8 @@ pickle-email-*.html
 
 # Ignore application configuration
 /config/application.yml
+
+# C Code generate files
+*.bundle
+*.so
+*.o
