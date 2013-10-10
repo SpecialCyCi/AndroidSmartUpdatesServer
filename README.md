@@ -13,12 +13,12 @@ How to Install
 1.  install the rails 3.2.13 and ruby 2.0
 2.  exec these command in terminal
 
-> \$ cd your_application_root_path  <br>
-> \$ bundle install <br>
-> \$ rake db:migrate<br>
-> \$ cd lib/differ/c_code <br>
-> \$ ruby extconf.rb <br>
-> \$ make <br>
+> $ cd your_application_root_path  <br>
+> $ bundle install <br>
+> $ rake db:migrate<br>
+> $ cd lib/differ/c_code <br>
+> $ ruby extconf.rb <br>
+> $ make <br>
 
 if tips that "bzlib.h" is not existed, you need to install bzip2 develop package 
 by your self.<br>
@@ -29,7 +29,7 @@ for example, in CentOS:<br>
 Usage
 ----------
 exec 
-> \$ rails s
+> $ rails s
 
 in the application root path.
 
