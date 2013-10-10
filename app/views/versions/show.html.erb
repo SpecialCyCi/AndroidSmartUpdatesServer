@@ -1,0 +1,23 @@
+<p>
+  <b><%= t("activerecord.attributes.version.version_code") %>:</b>
+  <%= @version.version_code %>
+</p>
+
+<p>
+  <b><%= t("activerecord.attributes.version.version_name") %>:</b>
+  <%= @version.version_name %>
+</p>
+
+<p>
+  <b><%= t("activerecord.attributes.version.description") %>:</b>
+  <%= @version.description %>
+</p>
+
+<p>
+  <b><%= t("activerecord.attributes.version.application_id") %>:</b>
+  <%= @version.application.app_name %>
+</p>
+
+
+<%= link_to t('version.edit'), edit_application_version_path(@application,@version) %> |
+<%= link_to t('normal.back'), application_versions_path(@application) %>

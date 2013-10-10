@@ -1,0 +1,72 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+en:
+  normal:
+    back: "Back"
+  navigation:
+    title:  "Android Smart Updates"
+    home:   "Home"
+    logout: "Logout"
+    login:  "Login"
+    edit_account: "Edit account"
+    application: "Application"
+    admin: "Admin"
+    sign_up: "Sign Up"
+  application:
+    new:  "New Application"
+    editing_application: "Editing Application"
+    show: "Show"
+    edit: "Edit"
+    destroy: "Destroy"
+    operation: "Operation"
+    new_application: "New Application"
+    delete_sure: "Are you sure?"
+    not_exists_application: "Sorry, this application is not exist."
+    not_current_user_own: "Sorry, this application don't belongs to you."
+  version:
+    new:  "New version"
+    editing_version: "Editing Version"
+    show: "Show"
+    edit: "Edit"
+    destroy: "Destroy"
+    operation: "Operation"
+    new_version: "New Version"
+    delete_sure: "Are you sure?"
+    not_exists_version: "Sorry, this version is not exist"
+    not_current_user_own: "Sorry, this version don't belongs to you."
+    not_greater_than_the_newest_version: "Sorry, your apk manifest's version code is not greater than the newest version in the application."
+    not_match_application_package_name: "Sorry, your apk manifest's package name is not match the package name of application."
+    can_not_edit_not_last_version: "Sorry, you can only modify the last version.If you in need, please contact to admin."
+  differ:
+    error: "There were some error happend, and it can't make patch for your application, please contact to admin."
+  activerecord:
+    models:
+      application: "application"
+      version: "version"
+    attributes:
+      application:
+        app_id: "App ID"
+        app_name: "App Name"
+        package_name: "Package Name"
+        description: "Description"
+        user_id: "User ID"
+      version:
+        version_code: "Version Code"
+        description:  "Description(display in update dialog)"
+        user_id:      "User Id"
+        application_id: "Application"
+        apk: "Upload APK File"
+    errors:
+      messages:
+        blank: "%{attribute} can't not blank"
+        too_long: "%{attribute} is too long"
+        taken: "%{attribute} has been taken"
+      models:
+        application:
+          attributes:
+            package_name: 
+              invalid: "%{attribute} need to comply with the rules of JAVA package name commond"
+        version:
+          attributes:
+            apk_file_name:
+              invalid: "That's not an apk file!"

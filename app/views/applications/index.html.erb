@@ -1,0 +1,27 @@
+
+<table class="table">
+  <tr>
+    <th><%= t("activerecord.attributes.application.app_id") %></th>
+    <th><%= t("activerecord.attributes.application.app_name") %></th>
+    <th><%= t("activerecord.attributes.application.package_name") %></th>
+    <th><%= t("activerecord.attributes.application.description") %></th>
+    <th><%= t("application.operation") %></th>
+  </tr>
+
+<% @applications.each do |application| %>
+  <tr>
+    <td><%= application.id %></td>
+    <td><%= link_to application.app_name, application_versions_url(application)  %></td>
+    <td><%= application.package_name %></td>
+    <td><%= application.description %></td>
+    <td class="btn-group">
+        <%= link_to t('application.show'), application, :class => "btn" %>
+        <%= link_to t('application.edit'), edit_application_path(application), :class => "btn" %>
+        <%= link_to t('application.destroy'), application, method: :delete, data: { confirm: t('application.delete_sure')},:class => "btn" %>
+    </td>
+  </tr>
+<% end %>
+</table>
+<br />
+<%= link_to t('application.new_application'), new_application_path , :class => "btn" %>
+

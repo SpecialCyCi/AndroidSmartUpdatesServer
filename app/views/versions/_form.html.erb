@@ -1,0 +1,18 @@
+<%  if @version.id != nil 
+      url = application_version_path(@application,@version)
+    else
+      url = application_versions_path(@application)
+    end %>
+<%= simple_form_for(@version,:url => url) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :description %>
+    <%= f.input :apk, as: :file if action_name != "edit" %>  
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
+<% end %>

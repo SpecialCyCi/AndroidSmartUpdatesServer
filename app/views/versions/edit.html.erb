@@ -1,0 +1,6 @@
+<h3><%=  t("version.editing_version") %></h3>
+
+<%= render 'form' %>
+
+<%= link_to t('version.show'), application_version_path(@application,@version) %> |
+<%= link_to t('normal.back'), application_versions_path(@application) %>

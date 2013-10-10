@@ -1,0 +1,29 @@
+<table class="table">
+  <tr>
+    <th><%= t("activerecord.attributes.version.version_code") %></th>
+    <th><%= t("activerecord.attributes.version.version_name") %></th>
+    <th><%= t("activerecord.attributes.version.description") %></th>
+    <th><%= t("activerecord.attributes.version.user_id") %></th>
+    <th><%= t("activerecord.attributes.version.application_id") %></th>
+    <th><%= t("application.operation") %></th>
+  </tr>
+
+<% @page_versions = @versions.paginate(:page => params[:page]) %>
+<% @page_versions.each do |version| %>
+  <tr>
+    <td><%= version.version_code %></td>
+    <td><%= version.version_name %></td>
+    <td><%= version.description %></td>
+    <td><%= version.user_id %></td>
+    <td><%= version.application_id %></td>
+    <td class="btn-group">
+    <%= link_to t('version.show'), application_version_path(@application,version), :class => "btn" %>
+    <%= link_to t('version.edit'), edit_application_version_path(@application,version), :class => "btn" if version == @versions.last %>
+    <%= link_to t('version.destroy'), application_version_path(@application,version), method: :delete, data: { confirm: t('application.delete_sure')},:class => "btn" if version == @versions.last %>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @page_versions %>
+
+<br />
+<%= link_to t('version.new_version'), new_application_version_path(@application) , :class => "btn" %>
